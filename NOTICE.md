@@ -1,0 +1,5 @@
+# Créditos
+
+- `skills/retomar-trabalho`: adaptada de `templates/task-handoff.md.template` do
+  vibe-coding-toolkit (soumatheusgomes/vibe-coding-toolkit, commit `7ef68dd`),
+  licença MIT, © 2026 Matheus Gomes.
