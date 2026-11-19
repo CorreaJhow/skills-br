@@ -33,16 +33,16 @@ Ou manual: copie a pasta de uma skill de `skills/` para `~/.claude/skills/` (glo
 
 ## Como as skills funcionam
 
-Uma skill é uma pasta com um arquivo . No topo dele há duas linhas que importam:  e . O Claude lê **só a descrição** de cada skill instalada (custa pouco). Quando o seu pedido bate com a descrição, ele carrega o resto do arquivo e passa a seguir aquelas instruções. Por isso você não precisa decorar nada: pede em linguagem natural e a skill certa entra sozinha.
+Uma skill é uma pasta com um arquivo `SKILL.md`. No topo dele há duas linhas que importam: `name` e `description`. O Claude lê **só a descrição** de cada skill instalada (custa pouco). Quando o seu pedido bate com a descrição, ele carrega o resto do arquivo e passa a seguir aquelas instruções. Por isso você não precisa decorar nada: pede em linguagem natural e a skill certa entra sozinha.
 
 O que cada uma manda o Claude fazer:
 
-- ****: antes de tudo, monta um jeito de **reproduzir** o bug (teste que falha, script, navegador sem interface, bisect). Só então levanta hipóteses, instrumenta, corrige, escreve o teste de regressão e **limpa** os logs de debug. Se 3 correções seguidas falharem, manda parar e repensar a causa em vez de tentar a quarta.
-- ****: antes de dizer "pronto", exige a **prova** certa para cada afirmação (testes passam = saída do teste; bug corrigido = o sintoma original sumiu; site no ar = URL aberta e testada no celular). Tem uma lista de sinais de alerta ("deve funcionar", "acho que passou") que obrigam a verificar.
-- ****: ao pausar, escreve um  (onde parou, evidência, próximo passo). Ao voltar, **confere o estado real** (arquivos, git, checks) antes de confiar no que está escrito, porque handoff é contexto, não prova.
-- ****: diagnostica, pesquisa palavras-chave, corrige title e description, Open Graph (a prévia no WhatsApp), checklist técnico, dados estruturados (JSON-LD), AEO/GEO (aparecer em resposta de IA) e cria o . Não inventa endereço, telefone nem avaliação.
-- ****: calibra o seu nível com poucas perguntas, entrega um **mapa de módulos e para**, depois ensina um módulo por vez com intuição antes da teoria. Só avança depois de checar que você entendeu, e salva o progresso.
-- ****: conta marcadores de texto de IA **por parágrafo** (1 é normal, 3 ou mais reescreve), remove os que aparecem sempre ("o resultado?", "não é sobre X, é sobre Y", "papo reto") e só acrescenta detalhe concreto que **você** fornecer. Preserva os seus cacoetes e gírias.
+- **`diagnosticar-bug`**: antes de tudo, monta um jeito de **reproduzir** o bug (teste que falha, script, navegador sem interface, bisect). Só então levanta hipóteses, instrumenta, corrige, escreve o teste de regressão e **limpa** os logs de debug. Se 3 correções seguidas falharem, manda parar e repensar a causa em vez de tentar a quarta.
+- **`verificar-antes-de-concluir`**: antes de dizer "pronto", exige a **prova** certa para cada afirmação (testes passam = saída do teste; bug corrigido = o sintoma original sumiu; site no ar = URL aberta e testada no celular). Tem uma lista de sinais de alerta ("deve funcionar", "acho que passou") que obrigam a verificar.
+- **`retomar-trabalho`**: ao pausar, escreve um `HANDOFF.md` (onde parou, evidência, próximo passo). Ao voltar, **confere o estado real** (arquivos, git, checks) antes de confiar no que está escrito, porque handoff é contexto, não prova.
+- **`seo-specialist`**: diagnostica, pesquisa palavras-chave, corrige title e description, Open Graph (a prévia no WhatsApp), checklist técnico, dados estruturados (JSON-LD), AEO/GEO (aparecer em resposta de IA) e cria o `llms.txt`. Não inventa endereço, telefone nem avaliação.
+- **`aprender-do-zero`**: calibra o seu nível com poucas perguntas, entrega um **mapa de módulos e para**, depois ensina um módulo por vez com intuição antes da teoria. Só avança depois de checar que você entendeu, e salva o progresso.
+- **`humanizador-pt-br`**: conta marcadores de texto de IA **por parágrafo** (1 é normal, 3 ou mais reescreve), remove os que aparecem sempre ("o resultado?", "não é sobre X, é sobre Y", "papo reto") e só acrescenta detalhe concreto que **você** fornecer. Preserva os seus cacoetes e gírias.
 
 ## Exemplos de uso
 
