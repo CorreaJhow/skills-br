@@ -1,7 +1,7 @@
 {
   "name": "skills-br",
-  "version": "0.1.0",
-  "description": "Skills do Claude Code em português: diagnosticar bug, verificar antes de concluir, retomar trabalho, SEO e estudo do zero.",
+  "version": "0.2.0",
+  "description": "Skills do Claude Code em português: diagnosticar bug, verificar antes de concluir, retomar trabalho, SEO, estudo do zero e humanizador de texto.",
   "author": { "name": "Jhonatas Correa" },
   "license": "MIT"
 }
