@@ -1,0 +1,12 @@
+{
+  "name": "skills-br",
+  "description": "Skills do Claude Code em português.",
+  "owner": { "name": "Jhonatas Correa" },
+  "plugins": [
+    {
+      "name": "skills-br",
+      "source": "./",
+      "description": "Diagnosticar bug, verificar antes de concluir, retomar trabalho, SEO para negócios locais e estudo do zero."
+    }
+  ]
+}
