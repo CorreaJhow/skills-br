@@ -3,11 +3,11 @@
 **Skills do Claude Code em português que fazem o Claude parar de chutar, parar de dizer "pronto" sem provar e continuar de onde você parou.**
 
 ![licença MIT](https://img.shields.io/badge/licença-MIT-yellow)
-![skills](https://img.shields.io/badge/skills-6-brightgreen)
+![skills](https://img.shields.io/badge/skills-8-brightgreen)
 ![idioma](https://img.shields.io/badge/idioma-PT--BR-blue)
-![testadas](https://img.shields.io/badge/testadas-6%2F6-success)
+![testadas](https://img.shields.io/badge/testadas-8%2F8-success)
 
-Seis skills grátis, escritas em PT-BR, do dia a dia de quem programa, vende site para negócio local e estuda sozinho. Cada uma foi testada de verdade (veja [Testado](#testado)).
+Oito skills grátis, escritas em PT-BR, do dia a dia de quem programa, vende site para negócio local e estuda sozinho. Cada uma foi testada de verdade (veja [Testado](#testado)).
 
 ## Instalar em 1 minuto
 
@@ -29,6 +29,8 @@ Ou manual: copie a pasta de uma skill de `skills/` para `~/.claude/skills/` (glo
 | O contexto acabou no meio do trabalho | [`retomar-trabalho`](skills/retomar-trabalho) | Salva onde parou num `HANDOFF.md` e, ao voltar, confere o estado real antes de seguir |
 | Seu site não aparece no Google (nem na IA) | [`seo-specialist`](skills/seo-specialist) | Audita e corrige SEO, AEO e GEO de site de negócio local, sem inventar dado |
 | Você quer aprender algo sério, não só tirar dúvida | [`aprender-do-zero`](skills/aprender-do-zero) | Monta roteiro em módulos, ensina um por vez e só avança depois de checar que você entendeu |
+| Você quer treinar entrevista de emprego | [`simulador-entrevista`](skills/simulador-entrevista) | Faz o papel de recrutadora ou de entrevistador técnico, uma pergunta por vez, e no fim dá avaliação honesta e plano de estudo |
+| Você quer vender algo usado | [`anuncio-usado`](skills/anuncio-usado) | Monta o anúncio honesto: estado real, preço pesquisado, título, descrição, perguntas e negociação |
 | Seu texto soa como ChatGPT | [`humanizador-pt-br`](skills/humanizador-pt-br) | Acha os padrões de texto de IA, reescreve preservando a sua voz e mostra o que mudou |
 
 ## Como as skills funcionam
@@ -42,6 +44,8 @@ O que cada uma manda o Claude fazer:
 - **`retomar-trabalho`**: ao pausar, escreve um `HANDOFF.md` (onde parou, evidência, próximo passo). Ao voltar, **confere o estado real** (arquivos, git, checks) antes de confiar no que está escrito, porque handoff é contexto, não prova.
 - **`seo-specialist`**: diagnostica, pesquisa palavras-chave, corrige title e description, Open Graph (a prévia no WhatsApp), checklist técnico, dados estruturados (JSON-LD), AEO/GEO (aparecer em resposta de IA) e cria o `llms.txt`. Não inventa endereço, telefone nem avaliação.
 - **`aprender-do-zero`**: calibra o seu nível com poucas perguntas, entrega um **mapa de módulos e para**, depois ensina um módulo por vez com intuição antes da teoria. Só avança depois de checar que você entendeu, e salva o progresso.
+- **`simulador-entrevista`**: faz o papel de quem entrevista (RH, técnica ou o processo todo), **uma pergunta por vez**, espera a sua resposta e, no fim, entrega uma avaliação honesta e o que estudar. Nunca inventa experiência que você não tem.
+- **`anuncio-usado`**: transforma as suas anotações sobre um item usado num anúncio pronto: grau de conservação, **preço pesquisado** no mesmo modelo, título, descrição, perguntas prováveis e resposta de negociação. O que não se sabe vira "vendedor confirma", nunca especificação inventada.
 - **`humanizador-pt-br`**: conta marcadores de texto de IA **por parágrafo** (1 é normal, 3 ou mais reescreve), remove os que aparecem sempre ("o resultado?", "não é sobre X, é sobre Y", "papo reto") e só acrescenta detalhe concreto que **você** fornecer. Preserva os seus cacoetes e gírias.
 
 ## Exemplos de uso
@@ -85,6 +89,8 @@ Cada skill rodou em um projeto de brinquedo, com o `claude -p`, carregando só e
 | `retomar-trabalho` | "vou parar por aqui" | criou o `HANDOFF.md` com onde parou e próximo passo, sem mexer no código |
 | `seo-specialist` | `index.html` de barbearia sem nenhuma tag | aplicou title, description, Open Graph, JSON-LD e `viewport`, sem inventar dado |
 | `aprender-do-zero` | "quero aprender indexação de banco" | parou e fez as perguntas de nível antes de montar o roteiro |
+| `simulador-entrevista` | "quero treinar entrevista de RH para dev backend júnior" | abriu como recrutadora, apresentou-se e fez **uma única pergunta**, avisando que a avaliação sai só no final |
+| `anuncio-usado` | vender um violão usado, com um defeito pequeno | **não inventou nada**: perguntou o modelo, o tipo, o estado do risco e a cidade antes de montar o anúncio |
 | `humanizador-pt-br` | parágrafo cheio de clichê de IA | removeu 12 marcadores, reescreveu curto e **não inventou** o método que faltava; pediu o dado real |
 
 ## Recomendo também (de terceiros)
